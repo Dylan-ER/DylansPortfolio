@@ -3,12 +3,12 @@ import Page from "../components/page";
 export default function Resume() {
   return (
     <Page>
-      <div className="mt-2 mx-5 px-5">
+      <div className="container-fluid">
         <h2 className="text-center fw-medium fs-2 lh-sm">
           Dylan Estronza-Ramirez
         </h2>
-        <div className="d-flex">
-          <div className="d-inline p-2 flex-column">
+        <div className="row mb-3">
+          <div className="col-sm-12 col-md-6">
             <p className="mb-2">
               <i className="bi bi-github" /> GitHub:{" "}
               <a href="https://github.com/Dylan-ER">Dylan-ER</a>
@@ -24,13 +24,13 @@ export default function Resume() {
               </a>
             </p>
           </div>
-          <div className="ms-auto d-inline p-2">
+          <div className="col-sm-12 col-md-6 text-center text-md-end">
             Gatesville, Texas 76528 USA
           </div>
         </div>
         <div className="text-center fw-medium fs-2 lh-sm">
-          <h4 className="">Education</h4>
           <hr className="m-2" />
+          <h4 className="mt-2 fw-bold text-decoration-underline">Education</h4>
         </div>
         <div className="d-flex">
           <div className="d-inline p-2 flex-column">
@@ -42,8 +42,8 @@ export default function Resume() {
           </div>
         </div>
         <div className="text-center fw-medium fs-2 lh-sm">
-          <h4 className="">Skills</h4>
           <hr className="m-2" />
+          <h4 className="mt-2 fw-bold text-decoration-underline">Skills</h4>
         </div>
         <div className="d-flex d-inline p-2 flex-column">
             <p className="mb-1">Language and frameworks: JavaScript, HTML, CSS, C++, NodeJS, React, NextJS</p>
@@ -51,8 +51,8 @@ export default function Resume() {
             <p className="mb-1">Toolsets: NPM, NVM, Git/GitHub, </p>
         </div>
         <div className="text-center fw-medium fs-2 lh-sm">
-          <h4 className="">Professional Experience</h4>
           <hr className="m-2" />
+          <h4 className="mt-2 fw-bold text-decoration-underline">Professional Experience</h4>
         </div>
         <div className="d-flex">
           <div className="d-inline p-2 flex-column">
@@ -65,8 +65,8 @@ export default function Resume() {
           </div>
         </div>
         <div className="text-center fw-medium fs-2 lh-sm">
-          <h4 className="">References</h4>
           <hr className="m-2" />
+          <h4 className="mt-2 fw-bold text-decoration-underline">References</h4>
         </div>
         <div className="d-flex d-inline p-2 flex-column">
             <p className="mb-1">Available upon request</p>

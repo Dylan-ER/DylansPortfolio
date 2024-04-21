@@ -1,11 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+// import 'bootstrap/dist/js/bootstrap.min.js';
 import { useState, useEffect } from "react";
 import "./global.css"
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 
 const App = ({ Component, pageProps }) => {
+  useEffect(() => {
+    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+  }, []);
   const router = useRouter();
   return (
     <AnimatePresence mode="wait">

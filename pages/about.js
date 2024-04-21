@@ -50,32 +50,19 @@ export default function About() {
     },
   };
 
-  //  animation for  popup
-
-  const variants = {
-    visible: {
-      scale: 1.1,
-      boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.2)",
-      y: -50,
-      x: -100,
-      cursor: "pointer",
-      transition: { duration: 1, type: "spring" },
-    },
-    hidden: { scale: 1, opacity: 0 },
-  };
   return (
     <Page>
       <h1 className="text-center fw-medium fs-2 lh-sm">About Me</h1>
 
-      <div className="d-flex justify-content-center mx-5 py-2">
-        <p className="rounded-pill m-2 p-2 border border-info-subtle bg-info-subtle text-info-emphasis">
-          This site was created with NextJ, Bootstrap, and framer-motion! Click
+      <div className="container justify-content-center text-center">
+        <p className="rounded-5 p-2 border border-info-subtle bg-info-subtle text-info-emphasis">
+          This site was created with NextJS, Bootstrap, and framer-motion! Click
           on a card to learn more on me!
         </p>
       </div>
 
       <section className="container mx-auto mt-5">
-        <motion.ul
+        <motion.div
           style={{
             filter: show ? "blur(1px)" : "none",
           }}
@@ -84,82 +71,84 @@ export default function About() {
           initial="hidden"
           animate="visible"
         >
-          {data.map((cval) => {
-            return (
-              <>
-                <motion.div
-                  layout
-                  className="col-lg"
-                  onClick={() => {
-                    setShow(!show);
-                    setinfo(cval);
-                  }}
-                  variants={item}
-                >
-                  <div
-                    className="card position-flex m-3"
-                    style={{ borderRadius: "2rem", cursor: "pointer" }}
-                  >
-                    <Image
-                      src={cval.img}
-                      width={600}
-                      height={300}
-                      className="img-fluid"
-                      style={{
-                        borderRadius: "inherit",
-                      }}
-                      alt=""
-                    />
-                    <h3
-                      className="position-absolute text-capitalize text-black fw-bold"
-                      style={{
-                        top: "0%",
-                        left: "35%",
-                      }}
+          <div className="container text-center">
+            <div className="row">
+              {data.map((cval) => {
+                return (
+                  <>
+                    <motion.div
+                      layout
+                      className="col-sm-12 col-md-6 col-lg-4"
+                      variants={item}
                     >
-                      {cval.name}
-                    </h3>
-                  </div>
-                </motion.div>
-              </>
-            );
-          })}
-        </motion.ul>
+                      <button
+                        type="button"
+                        className="position-relative m-3 rounded-5 border-0"
+                        data-bs-toggle="modal"
+                        data-bs-target={"#myModal" + cval.id}
+                      >
+                        <Image
+                          src={cval.img}
+                          width={600}
+                          height={300}
+                          className="img-fluid"
+                          style={{
+                            borderRadius: "inherit",
+                          }}
+                          alt=""
+                        />
+                        <span className="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger">
+                          {cval.name}
+                          <span className="visually-hidden">{cval.name}</span>
+                        </span>
+                      </button>
+                    </motion.div>
+                    <div
+                      className="modal fade"
+                      id={"myModal"+cval.id}
+                      tabIndex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div className="modal-dialog">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <Image
+                              src={cval.img}
+                              className="img-fluid rounded-4"
+                              width={500}
+                              height={300}
+                              borderRadius="2rem"
+                              alt=""
+                              srcset=""
+                            />
+                          </div>
+                          <div className="modal-body text-black">
+                            <h1> {cval.name}</h1>
+                            <p>{cval.dec}</p>
+                          </div>
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
+            </div>
+          </div>
+        </motion.div>
 
-        <AnimatePresence>
-          {show && (
-            <>
-              <motion.div
-                className="card "
-                style={{
-                  position: "fixed",
-                  top: "35%",
-                  left: "43%",
-                  right: "32%",
-                }}
-                onClick={() => {
-                  setShow(!show);
-                }}
-                variants={variants}
-                animate={show ? "visible" : "hidden"}
-                exit={{ scale: 1, opacity: 0 }}
-              >
-                <Image
-                  src={info.img}
-                  className="img-fluid rounded-4"
-                  width={500}
-                  height={300}
-                  borderRadius="2rem"
-                  alt=""
-                  srcset=""
-                />
-
-                <h1 className="m-2"> {info.name}</h1>
-                <p className="m-2">{info.dec}</p>
-              </motion.div>
-            </>
-          )}
-        </AnimatePresence>
+        {/* <AnimatePresence> */}
+        {/* {show && <></>} */}
+        {/* </AnimatePresence> */}
       </section>
     </Page>
   );
