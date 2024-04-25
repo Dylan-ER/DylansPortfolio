@@ -1,4 +1,5 @@
 import Page from "../components/page";
+import Link from "next/link";
 
 export default function Resume() {
   return (
@@ -18,11 +19,10 @@ export default function Resume() {
               <a href="https://www.linkedin.com/in/dylan-estronza/">Dylan-ER</a>
             </p>
             <p className="mb-2">
-              <i className="bi bi-mailbox-flag" /> Email:{" "}
-              <a href="mailto:dylanestronza0311@gmail.com">
-                dylanestronza0311@gmail.com
-              </a>
+              <i className="bi bi-mailbox-flag" />{" "}
+              <Link href="/contact">Contact me</Link>
             </p>
+            
           </div>
           <div className="col-sm-12 col-md-6 text-center text-md-end">
             Gatesville, Texas 76528 USA

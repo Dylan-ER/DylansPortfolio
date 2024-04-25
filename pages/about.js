@@ -1,9 +1,9 @@
 import Page from "../components/page";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import SwE from "../pages/img/SwE_img.png";
-import project from "../pages/img/agile-01-scaled.jpg";
-import education from "../pages/img/education.jpeg";
+import SwE from "../pages/img/robot.jpg";
+import project from "../pages/img/code.jpg";
+import education from "../pages/img/bookman.jpg";
 import Image from "next/image";
 
 const data = [
@@ -116,8 +116,8 @@ export default function About() {
                             <Image
                               src={cval.img}
                               className="img-fluid rounded-4"
-                              width={500}
-                              height={300}
+                              width={600}
+                              height={400}
                               borderRadius="2rem"
                               alt=""
                               srcset=""

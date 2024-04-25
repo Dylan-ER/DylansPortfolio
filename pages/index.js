@@ -3,7 +3,7 @@ import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import { useState, useEffect, useCallback } from "react";
 import { StrictMode } from "react";
 import * as ReactDOMClient from "react-dom/client";
-import luffy from "../pages/img/Luffy.jpg";
+import me from "../pages/img/IMG_1839.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -25,7 +25,7 @@ export default function Home() {
             >
               <Image
                 className="rounded-circle"
-                src={luffy}
+                src={me}
                 width={200}
                 height={200}
                 alt=""
