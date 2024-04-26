@@ -7,7 +7,7 @@ export default async function sendEmail(req, res) {
     console.log("REQ.BODY", req.body);
     const email = await sendgrid.send({
       to: "dylanestronza0311@gmail.com", // Your email where you'll receive emails
-      from: "dr.tran0311@gmail.com", // your website email address here
+      from: "dylansecondacct@gmail.com", // your website email address here
       subject: `${req.body.subject}`,
       text: 'hi',
       html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
