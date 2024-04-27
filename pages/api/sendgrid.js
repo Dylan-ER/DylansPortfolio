@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 const sendgrid = require('@sendgrid/mail');
-sendgrid.setApiKey('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');
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async function sendEmail(req, res) {
   try {
