@@ -20,9 +20,12 @@ export default function Resume() {
             </p>
             <p className="mb-2">
               <i className="bi bi-mailbox-flag" />{" "}
-              <Link href="/contact">Contact me</Link>
+              <a href="mailto:estronzaj@gmail.com">
+                {" "}
+                dylanestronza0311@gmail.com
+              </a>
+              {/* <Link href="/contact">Contact me</Link> */}
             </p>
-            
           </div>
           <div className="col-sm-12 col-md-6 text-center text-md-end">
             Gatesville, Texas 76528 USA
@@ -37,22 +40,25 @@ export default function Resume() {
             <p className="mb-1">University of North Texas, Denton, TX</p>
             <p className="mb-1">B.S., Computer Science</p>
           </div>
-          <div className="ms-auto d-inline p-2">
-            2024
-          </div>
+          <div className="ms-auto d-inline p-2">2024</div>
         </div>
         <div className="text-center fw-medium fs-2 lh-sm">
           <hr className="m-2" />
           <h4 className="mt-2 fw-bold text-decoration-underline">Skills</h4>
         </div>
         <div className="d-flex d-inline p-2 flex-column">
-            <p className="mb-1">Language and frameworks: JavaScript, HTML, CSS, C++, NodeJS, React, NextJS</p>
-            <p className="mb-1">Databases: MongoDB, MySQL Workbench</p>
-            <p className="mb-1">Toolsets: NPM, NVM, Git/GitHub, </p>
+          <p className="mb-1">
+            Language and frameworks: JavaScript, HTML, CSS, C++, NodeJS, React,
+            NextJS
+          </p>
+          <p className="mb-1">Databases: MongoDB, MySQL Workbench</p>
+          <p className="mb-1">Toolsets: NPM, NVM, Git/GitHub, </p>
         </div>
         <div className="text-center fw-medium fs-2 lh-sm">
           <hr className="m-2" />
-          <h4 className="mt-2 fw-bold text-decoration-underline">Professional Experience</h4>
+          <h4 className="mt-2 fw-bold text-decoration-underline">
+            Professional Experience
+          </h4>
         </div>
         <div className="d-flex">
           <div className="d-inline p-2 flex-column">
@@ -60,16 +66,14 @@ export default function Resume() {
             <p className="mb-1">University of North Texas, Denton, Texas</p>
             <p className="mb-1">McConnell Hall</p>
           </div>
-          <div className="ms-auto d-inline p-2">
-            11/2021-Present
-          </div>
+          <div className="ms-auto d-inline p-2">11/2021-Present</div>
         </div>
         <div className="text-center fw-medium fs-2 lh-sm">
           <hr className="m-2" />
           <h4 className="mt-2 fw-bold text-decoration-underline">References</h4>
         </div>
         <div className="d-flex d-inline p-2 flex-column">
-            <p className="mb-1">Available upon request</p>
+          <p className="mb-1">Available upon request</p>
         </div>
       </div>
     </Page>

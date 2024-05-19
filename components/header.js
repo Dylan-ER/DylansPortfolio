@@ -33,11 +33,11 @@ const Header = () => {
                 Resume
               </Link>
             </div>
-            <div className="nav-item me-3">
+            {/* <div className="nav-item me-3">
               <Link className="nav-link" href="/contact">
                 Contact
               </Link>
-            </div>
+            </div> */}
 
           </ul>
         </div>
