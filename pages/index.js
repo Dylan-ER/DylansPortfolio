@@ -43,7 +43,7 @@ export default function Home() {
             techniques. I've spent the last year and a half working on my skills
             to create web applications for myself and for a sponsor during my
             capstone. I've gained experience programming in React, Nextjs,
-            JavaScript and MySQL Workbench and i've gained a special interest in
+            JavaScript and MySQL Workbench and I've gained a special interest in
             Software Engineering.
           </p>
           <p className="pt-5">

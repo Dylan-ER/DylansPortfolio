@@ -20,7 +20,7 @@ export default function Resume() {
             </p>
             <p className="mb-2">
               <i className="bi bi-mailbox-flag" />{" "}
-              <a href="mailto:estronzaj@gmail.com">
+              <a href="mailto:dylanestronza0311@gmail.com">
                 {" "}
                 dylanestronza0311@gmail.com
               </a>
